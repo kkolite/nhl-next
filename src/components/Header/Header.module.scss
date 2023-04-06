@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 20px;
+  background-color: azure;
+}
+
+.header {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+}

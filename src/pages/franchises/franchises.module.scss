@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  gap: 10px;
+  align-items: center;
+}
+
+.about {
+  display: flex;
+  gap: 30px;
+  &__text {
+    font-size: 18px;
+  }
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 10px;
+  align-items: center;
+}

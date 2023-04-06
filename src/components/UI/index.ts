@@ -1,4 +1,4 @@
-export { MyLink } from './MyLink';
+export { MyLink } from './link/Link';
 export { NotFound } from './NotFound';
 //export { MyButton } from './button';
 //export { MyInput } from './input';

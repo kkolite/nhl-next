@@ -1,5 +1,6 @@
 import { IFranchise } from '@/data/types';
-import React, { FC } from 'react';
+import React from 'react';
+import styles from './Franchise.module.scss';
 
 interface IProps {
   franchise: IFranchise
@@ -7,9 +8,10 @@ interface IProps {
 
 const Franchise = ({franchise}:IProps) => {
   return (
-    <div>
-      <p>{franchise.teamName}</p>
-      <p>{franchise.locationName}</p>
+    <div className={styles.container}>
+      <p>{franchise.locationName} {franchise.teamName}</p>
+      <p>First season - {franchise.firstSeasonId.toString().slice(0,4)}</p>
+      <p>{franchise.lastSeasonId ? `Last season - ${franchise.lastSeasonId.toString().slice(4)}` : 'Active'}</p>
     </div>
   );
 };

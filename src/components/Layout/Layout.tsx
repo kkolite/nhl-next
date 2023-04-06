@@ -1,5 +1,6 @@
 import React, { ReactNode } from 'react';
-import { Navbar } from './Navbar';
+import styles from './Layout.module.scss';
+import Header from '../Header/Header';
 
 interface IProps {
   children: ReactNode
@@ -7,10 +8,10 @@ interface IProps {
 
 const Layout = ({children}:IProps) => {
   return (
-    <>
-      <Navbar />
+    <div className={styles.container}>
+      <Header />
       {children}
-    </>
+    </div>
   );
 };
 

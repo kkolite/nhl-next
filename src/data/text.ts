@@ -14,7 +14,7 @@ export const TEXT = {
   },
   PAGES: {
     ABOUT: 'About',
-    CARDS: 'Cards',
+    FRANCHISES: 'Franchises',
     FORM: 'Form',
     CURRENT: 'Current page:',
   },
