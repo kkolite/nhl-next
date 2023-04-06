@@ -1,5 +1,5 @@
 import ClearSearch from '../../../assets/ClearSearch';
-import { setVisible } from '../../../store/cardSlice';
+import { setVisible } from '../../../store/franchisesSlice';
 import { useAppDispatch, useAppSelector } from '../../../store/hook';
 import classes from './MyModal.module.scss';
 

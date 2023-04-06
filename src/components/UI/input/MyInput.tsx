@@ -1,5 +1,5 @@
 import { useDebounce } from '../../../hooks';
-import { fetchCards, setSearch } from '../../../store/cardSlice';
+import { fetchCards, setSearch } from '../../../store/franchisesSlice';
 import { useAppDispatch, useAppSelector } from '../../../store/hook';
 import classes from './MyInput.module.scss';
 
