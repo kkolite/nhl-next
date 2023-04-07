@@ -15,7 +15,7 @@ const franchises = () => {
     dispatch(fetchFranchise());
   }, [])
   return (
-    <div className={styles.container}>
+    <div className='main__container'>
       <div className={styles.about}>
         <p className={styles.about__text}>
           The National Hockey League was organized at the Windsor Hotel in Montreal
