@@ -64,6 +64,14 @@ export enum EOption {
   PREV = '?expand=team.schedule.previous'
 }
 
+export enum EPosition {
+  G = 'G',
+  D = 'D',
+  L = 'L',
+  C = 'C',
+  R = 'R'
+}
+
 export interface IPlayer {
   person: {
     id: number,

@@ -1,10 +1,11 @@
 import { EOption } from '@/data/types';
 import { useAppSelector } from '@/store/hook';
 import React from 'react';
-import Roster from './Roster/Roster';
-import Stats from './Stats/Stats';
-import Next from './Schedule/Next/Next';
-import Prev from './Schedule/Prev/Prev';
+import Roster from '../Roster/Roster';
+import Stats from '../Stats/Stats';
+import Next from '../Schedule/Next/Next';
+import Prev from '../Schedule/Prev/Prev';
+import styles from './Switch.module.scss';
 
 const Switch = () => {
   const option = useAppSelector(store => store.teamSetting.current);
@@ -24,8 +25,12 @@ const Switch = () => {
       result = <Prev />
       break;
   }
-  
-  return result;
+
+  return (
+    <div className={styles.container}>
+      {result}
+    </div>
+  );
 };
 
 export default Switch;
