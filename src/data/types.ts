@@ -45,11 +45,33 @@ export interface ITeam {
   shortName: String,
   officialSiteUrl: String,
   franchiseId: Number,
-  active: true
+  active: true,
   link: String,
+  roster?: {
+    roster: IPlayer[]
+  }
 }
 
 export enum EConference {
   EAST = 'Eastern',
   WEST = 'Western'
+}
+
+export enum EOption {
+  ROSTER = '?expand=team.roster',
+  STATS = '?expand=team.stats',
+  NEXT = '?expand=team.schedule.next',
+  PREV = '?expand=team.schedule.previous'
+}
+
+export interface IPlayer {
+  person: {
+    id: number,
+    fullName: string
+  },
+  jerseyNumber: string,
+  position: {
+    code: string,
+    type: string
+  }
 }

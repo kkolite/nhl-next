@@ -1,6 +1,7 @@
 import { ITeam } from "@/data/types";
 import styles from './Team.module.scss';
 import Navigation from "../Navigation/Navigation";
+import Switch from "../Switch";
 
 interface IProps {
   team: ITeam;
@@ -20,6 +21,7 @@ const Team = ({team}:IProps) => {
         <div>img placeholder</div>
       </div>
       <Navigation />
+      <Switch />
     </>
   );
 };
