@@ -49,7 +49,12 @@ export interface ITeam {
   link: String,
   roster?: {
     roster: IPlayer[]
-  }
+  },
+  teamStats?: {
+    splits: {
+      stat: IStats
+    }[]
+  }[]
 }
 
 export enum EConference {
@@ -82,4 +87,36 @@ export interface IPlayer {
     code: string,
     type: string
   }
+}
+
+export interface IStats {
+  wins: string | number,
+  losses: string | number,
+  ot: string | number,
+  pts: string | number,
+  ptPctg: string | number,
+  goalsPerGame: string | number,
+  goalsAgainstPerGame: string | number,
+  evGGARatio: string | number,
+  powerPlayPercentage: string | number,
+  powerPlayGoals: string | number,
+  powerPlayGoalsAgainst: string | number,
+  powerPlayOpportunities: string | number,
+  penaltyKillOpportunities: string | number,
+  penaltyKillPercentage: string | number,
+  shotsPerGame: string | number,
+  shotsAllowed: string | number,
+  winScoreFirst: string | number,
+  winOppScoreFirst: string | number,
+  winLeadFirstPer: string | number,
+  winLeadSecondPer: string | number,
+  winOutshootOpp: string | number,
+  winOutshotByOpp: string | number,
+  faceOffsTaken: string | number,
+  faceOffsWon: string | number,
+  faceOffsLost: string | number,
+  faceOffWinPercentage: string | number,
+  savePctRank: string | number,
+  shootingPctRank: string | number,
+  gamesPlayed?: number
 }

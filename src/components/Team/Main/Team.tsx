@@ -6,6 +6,7 @@ import { useAppDispatch } from "@/store/hook";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 import { fetchRoster } from "@/store/rosterSlice";
+import { fetchStats } from "@/store/statsSlice";
 
 interface IProps {
   team: ITeam;
@@ -17,7 +18,8 @@ const Team = ({team}:IProps) => {
 
   useEffect(() => {
     if (!query.id) return;
-    dispatch(fetchRoster(+query.id))
+    dispatch(fetchRoster(+query.id));
+    dispatch(fetchStats(+query.id));
   }, []);
 
   return (
