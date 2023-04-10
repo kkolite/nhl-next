@@ -1,5 +1,5 @@
-import { Teams } from '@/API/Team';
-import Team from '@/components/Team/Team';
+import { APITeams } from '@/API/Team';
+import Team from '@/components/TeamItem/TeamItem';
 import { EConference, ITeam } from '@/data/types';
 import React from 'react';
 import styles from './teams.module.scss';
@@ -9,7 +9,7 @@ interface IProps {
 }
 
 export const getStaticProps = async() => {
-  const teams = await Teams(); 
+  const teams = await APITeams(); 
   return { props: {teams} };
 }
 

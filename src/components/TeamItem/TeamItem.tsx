@@ -1,6 +1,7 @@
 import { ITeam } from '@/data/types';
 import React from 'react';
-import styles from './Team.module.scss';
+import styles from './TeamItem.module.scss';
+import Link from 'next/link';
 
 interface IProps {
   team: ITeam
@@ -9,7 +10,9 @@ interface IProps {
 const Team = ({team}:IProps) => {
   return (
     <div className={styles.container}>
-      <h3>{team.name}</h3>
+      <Link href={`/teams/${team.id}`}>
+        <h3>{team.name}</h3>
+      </Link>
       <div className={styles.controls}>
         <button>Roster</button>
         <button>Schedule</button>

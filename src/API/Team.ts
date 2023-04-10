@@ -5,13 +5,13 @@ interface IResult {
   teams: ITeam[]
 }
 
-export const Teams = async() => {
+export const APITeams = async() => {
   const res = await fetch(`${MAIN}${TEAMS}`);
   const result: IResult = await res.json();
   return result.teams;
 }
 
-export const Team = async(ID: Number) => {
+export const APITeam = async(ID: Number) => {
   const res = await fetch(`${MAIN}${TEAMS}${ID}`);
   const result: IResult = await res.json();
   return result.teams[0];
