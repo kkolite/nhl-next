@@ -13,8 +13,7 @@ const Navigation = () => {
     <ul className={styles.container}>
       <li onClick={() => handleClick(EOption.ROSTER)}>Roster</li>
       <li onClick={() => handleClick(EOption.STATS)}>Stats</li>
-      <li onClick={() => handleClick(EOption.PREV)}>Prev Games</li>
-      <li onClick={() => handleClick(EOption.NEXT)}>Next Games</li>
+      <li onClick={() => handleClick(EOption.SCHEDULE)}>Schedule</li>
     </ul>
   );
 };

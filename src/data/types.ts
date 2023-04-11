@@ -65,8 +65,7 @@ export enum EConference {
 export enum EOption {
   ROSTER = '?expand=team.roster',
   STATS = '?expand=team.stats',
-  NEXT = '?expand=team.schedule.next',
-  PREV = '?expand=team.schedule.previous'
+  SCHEDULE = '?expand=team.schedule.next',
 }
 
 export enum EPosition {
@@ -119,4 +118,68 @@ export interface IStats {
   savePctRank: string | number,
   shootingPctRank: string | number,
   gamesPlayed?: number
+}
+
+export interface IGame {
+  gamePk: number,
+  link: string,
+  gameType: string,
+  season: string,
+  gameDate: string,
+  status: {
+    abstractGameState: string,
+    codedGameState:string,
+    detailedState: string,
+    statusCode: string,
+    startTimeTBD: boolean
+  },
+  teams: {
+    away: {
+      leagueRecord: {
+        wins: number,
+        losses: number,
+        ot: number,
+        type: string
+      },
+      score: number,
+      team: {
+        id: number,
+        name: string,
+        link: string
+      }
+    },
+    home: {
+      leagueRecord: {
+        wins: number,
+        losses: number,
+        ot: number,
+        type: string
+      },
+      score: number,
+      team: {
+        id: number,
+        name: string,
+        link: string
+      }
+    }
+  },
+  venue: {
+    id: number,
+    name: string,
+    link: string
+  },
+  content: {
+    link: string
+  }
+}
+
+export interface IDate {
+  date: string,
+  totalItems: number,
+  totalEvents: number,
+  totalGames: number,
+  totalMatches: number,
+  games: IGame[],
+  events: [],
+  matches: []
 }

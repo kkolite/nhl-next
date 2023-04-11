@@ -1,6 +1,7 @@
 import { MyLoader } from '@/components/UI/loader';
 import { EPosition } from '@/data/types';
 import { useAppSelector } from '@/store/hook';
+import RosterLine from './RosterLine';
 
 const Roster = () => {
   const roster = useAppSelector(store => store.roster.roster);
@@ -19,27 +20,15 @@ const Roster = () => {
     : <div>
         <div>
           <h4>Goalies</h4>
-          <div>
-            {goalies.map((el) => (
-              <li key={el.jerseyNumber}>{el.jerseyNumber}. {el.person.fullName}</li>
-            ))}
-          </div>
+          <RosterLine line={goalies} />
         </div>
         <div>
           <h4>Defenders</h4>
-          <div>
-            {defenders.map((el) => (
-              <li key={el.jerseyNumber}>{el.jerseyNumber}. {el.person.fullName}</li>
-            ))}
-          </div>
+          <RosterLine line={defenders} />
         </div>
         <div>
           <h4>Forwards</h4>
-          <div>
-            {forwards.map((el) => (
-              <li key={el.jerseyNumber}>{el.jerseyNumber}. {el.person.fullName}</li>
-            ))}
-          </div>
+          <RosterLine line={forwards} />
         </div>
       </div>
 

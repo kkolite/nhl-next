@@ -3,9 +3,8 @@ import { useAppSelector } from '@/store/hook';
 import React from 'react';
 import Roster from '../Roster/Roster';
 import Stats from '../Stats/Stats';
-import Next from '../Schedule/Next/Next';
-import Prev from '../Schedule/Prev/Prev';
 import styles from './Switch.module.scss';
+import Schedule from '../Schedule/Schedule';
 
 const Switch = () => {
   const option = useAppSelector(store => store.teamSetting.current);
@@ -18,11 +17,8 @@ const Switch = () => {
     case EOption.STATS:
       result = <Stats />
       break;
-    case EOption.NEXT:
-      result = <Next />
-      break;
-    case EOption.PREV:
-      result = <Prev />
+    case EOption.SCHEDULE:
+      result = <Schedule />
       break;
   }
 

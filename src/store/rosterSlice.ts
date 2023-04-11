@@ -14,7 +14,7 @@ const initialState: ICardsState = {
   error: '',
 };
 
-export const fetchRoster = createAsyncThunk('cards/fetchCards', async (id: number) => {
+export const fetchRoster = createAsyncThunk('roster/fetchCards', async (id: number) => {
   const res = await APITeam(id, EOption.ROSTER);
   return res;
 });
