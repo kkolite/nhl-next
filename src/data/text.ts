@@ -3,8 +3,9 @@ export const TEXT = {
     DEFAULT: 'Error!',
     EMPTY: 'Empty list!',
     NO_FILE: 'No file!',
-    NOT_FOUND: 'Oops! We did not find the information you requested',
+    GAMES_NOT_FOUND: 'Oops! We did not find games in schedule. Please, use filter',
     TO_MAIN: 'To Main Page',
+    INVALID_DATE: 'Oops! Start date is greater than end date.'
   },
   CARD: {
     NAME: 'Name',
@@ -15,7 +16,7 @@ export const TEXT = {
   PAGES: {
     ABOUT: 'About',
     FRANCHISES: 'Franchises',
-    FORM: 'Form',
+    TEAMS: 'Teams',
     CURRENT: 'Current page:',
   },
 };

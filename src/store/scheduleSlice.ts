@@ -5,6 +5,8 @@ import { createSlice, createAsyncThunk, PayloadAction, AnyAction } from '@reduxj
 interface IScheduleState {
   schedule: IDate[];
   total: number;
+  startSearch: string;
+  endSearch: string;
   isLoading: boolean;
   error: string;
 }
@@ -18,6 +20,8 @@ interface IThunk {
 const initialState: IScheduleState = {
   schedule: [],
   total: 0,
+  startSearch: '',
+  endSearch: '',
   isLoading: false,
   error: '',
 };
@@ -30,7 +34,14 @@ export const fetchSchedule = createAsyncThunk('schedule/fetchSchedule', async ({
 const scheduleSlice = createSlice({
   name: 'schedule',
   initialState,
-  reducers: {},
+  reducers: {
+    setStart(state, action: PayloadAction<string>) {
+      state.startSearch = action.payload;
+    },
+    setEnd(state, action: PayloadAction<string>) {
+      state.endSearch = action.payload;
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(fetchSchedule.pending, (state) => {
@@ -53,3 +64,5 @@ function isError(action: AnyAction) {
 }
 
 export default scheduleSlice.reducer;
+
+export const { setEnd, setStart } = scheduleSlice.actions;
