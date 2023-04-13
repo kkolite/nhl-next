@@ -2,7 +2,7 @@
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 4px;
 
   & li {
     cursor: pointer;
@@ -21,14 +21,18 @@
 
 .container {
   display: flex;
-  flex-wrap: wrap;
-  gap: 80px;
+  flex-direction: column;
+  gap: 50px;
   font-size: 18px;
-  width: 50%;
+  width: 100%;
 }
 
 .block {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 15px;
+
+  & h4 {
+    color: rgb(111, 203, 249);
+  }
 }

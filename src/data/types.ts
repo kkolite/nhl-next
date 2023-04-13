@@ -10,43 +10,43 @@ export interface IFranchise {
 
 export interface ITeam {
   id: Number,
-  name: String,
+  name: string,
   venue: {
-    name: String,
-    link: String,
-    city: String,
+    name: string,
+    link: string,
+    city: string,
     timeZone: {
-      id: String,
+      id: string,
       offset: Number,
-      tz: String
+      tz: string
     }
   },
-  abbreviation: String,
-  teamName: String,
-  locationName: String,
-  firstYearOfPlay: String,
+  abbreviation: string,
+  teamName: string,
+  locationName: string,
+  firstYearOfPlay: string,
   division: {
     id: Number,
-    name: String,
-    nameShort: String,
-    link: String,
-    abbreviation: String
+    name: string,
+    nameShort: string,
+    link: string,
+    abbreviation: string
   },
   conference: {
     id: Number,
-    name: String,
-    link: String
+    name: string,
+    link: string
   },
   franchise: {
     franchiseId: Number,
-    teamName: String,
-    link: String
+    teamName: string,
+    link: string
   },
-  shortName: String,
-  officialSiteUrl: String,
+  shortName: string,
+  officialSiteUrl: string,
   franchiseId: Number,
   active: true,
-  link: String,
+  link: string,
   roster?: {
     roster: IPlayer[]
   },

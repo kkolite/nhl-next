@@ -47,14 +47,16 @@ const franchises = () => {
           placeholder='blur'
         />
       </div>
-      <h1>List of NHL Franchises</h1>
+      <h1 className={styles.h}>List of NHL Franchises</h1>
       {isLoading 
         ? <MyLoader />
-        : <div className={styles.cards}>
-            {list.map((el) => (
-              <Franchise key={el.franchiseId} franchise={el} />
-            ))} 
-          </div>
+        : list.length
+          ? <div className={styles.cards}>
+              {list.map((el) => (
+                <Franchise key={el.franchiseId} franchise={el} />
+              ))} 
+            </div>
+          : <></>
       }
     </div>
   );

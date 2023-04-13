@@ -1,9 +1,10 @@
 .link {
   text-decoration: none;
-  color: black;
+  color: rgb(111, 203, 249);
+  font-size: 18px;
   opacity: .8;
   transition: .2s;
   &:hover {
-    opacity: 1;
+    color: rgb(58, 175, 234);
   }
 }

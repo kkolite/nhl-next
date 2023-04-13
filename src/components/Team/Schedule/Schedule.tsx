@@ -12,7 +12,7 @@ const Schedule = () => {
 
   const now = Date.now();
   const futureGames = schedule.filter((el) => new Date(el.date).getTime() > now);
-  const prevGames = schedule.filter((el) => new Date(el.date).getTime() < now);
+  const prevGames = schedule.filter((el) => new Date(el.date).getTime() < now).reverse();
 
   return (
     <div className={styles.schedule__container}>
@@ -21,7 +21,7 @@ const Schedule = () => {
         isLoading 
         ? <MyLoader />
         : schedule.length
-          ? <>
+          ? <div className={styles.games__container}>
               {
               futureGames.length 
                 ? <div className={styles.games__block}>
@@ -38,7 +38,7 @@ const Schedule = () => {
                   </div>
                 : <></>
               }
-            </>
+            </div>
           : <p>{TEXT.ERRORS.GAMES_NOT_FOUND}</p>
       }
     </div>

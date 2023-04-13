@@ -36,17 +36,19 @@ const SetDate = () => {
 
   return (
     <div className={styles.set__container}>
-      <input 
-        type="date" 
-        value={start} 
-        onChange={handleStart}
-      />
-      <input 
-        type="date" 
-        value={end} 
-        onChange={handleEnd}
-      />
-      <button onClick={handleClick} className={styles.set__button}>Find</button>
+      <div className={styles.set__form}>
+        <input 
+          type="date" 
+          value={start} 
+          onChange={handleStart}
+        />
+        <input 
+          type="date" 
+          value={end} 
+          onChange={handleEnd}
+        />
+        <button onClick={handleClick} className={styles.set__button}>Find</button>
+      </div>
       <label className={styles.set__error}>{error}</label>
     </div>
   );

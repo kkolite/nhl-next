@@ -9,4 +9,24 @@
   flex-direction: column;
   gap: 5px;
   margin-top: 20px;
+  font-size: 18px;
+}
+
+.icon {
+  margin-right: 5px;
+}
+
+.link {
+  text-decoration: none;
+  color: rgb(111, 203, 249);
+  transition: all .2s;
+
+  &:hover {
+    color: rgb(58, 175, 234);
+  }
+}
+
+.logo {
+  height: 150px;
+  width: auto;
 }
