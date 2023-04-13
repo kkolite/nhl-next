@@ -1,5 +1,5 @@
 import { APITeam } from '@/API/Team';
-import { EOption, IPlayer } from '@/data/types';
+import { EOption, IPlayer, ITeam } from '@/data/types';
 import { createSlice, createAsyncThunk, PayloadAction, AnyAction } from '@reduxjs/toolkit';
 
 interface ICardsState {
@@ -22,7 +22,12 @@ export const fetchRoster = createAsyncThunk('roster/fetchCards', async (id: numb
 const rosterSlice = createSlice({
   name: 'roster',
   initialState,
-  reducers: {},
+  reducers: {
+    setRoster(state, action: PayloadAction<ITeam>) {
+      if (action.payload.roster)
+      state.roster = action.payload.roster.roster;
+    }
+  },
   extraReducers: (builder) => {
     builder
       .addCase(fetchRoster.pending, (state) => {
@@ -44,3 +49,5 @@ function isError(action: AnyAction) {
 }
 
 export default rosterSlice.reducer;
+
+export const { setRoster } = rosterSlice.actions

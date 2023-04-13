@@ -1,6 +1,6 @@
 import React from 'react';
 import { APITeam } from '../../API/Team'
-import { ITeam } from '@/data/types';
+import { EOption, ITeam } from '@/data/types';
 import Team from '@/components/Team/Main/Team';
 
 interface IParams {
@@ -11,13 +11,11 @@ interface IParams {
 
 export async function getServerSideProps({params}:IParams) {
   const index = +params.id;
-  const result = await APITeam(index);
+  const result = await APITeam(index, EOption.ROSTER);
   return { props: result}
 }
 
 const PageTeam = (result: ITeam) => {
-  console.log(result);
-  
   return (
     <div className='main__container'>
       <Team team={result} />

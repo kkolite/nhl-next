@@ -5,7 +5,7 @@ import Switch from "../Switch/Switch";
 import { useAppDispatch } from "@/store/hook";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
-import { fetchRoster } from "@/store/rosterSlice";
+import { fetchRoster, setRoster } from "@/store/rosterSlice";
 import { fetchStats } from "@/store/statsSlice";
 import { fetchSchedule } from "@/store/scheduleSlice";
 import { THREE_DAYS } from "@/data/consts";
@@ -32,7 +32,7 @@ const Team = ({team}:IProps) => {
     const end = new Date(date + THREE_DAYS).toISOString().slice(0, 10);
 
     dispatch(setOption(EOption.ROSTER))
-    dispatch(fetchRoster(ID));
+    dispatch(setRoster(team));
     dispatch(fetchStats(ID));
     dispatch(fetchSchedule({ID, start, end}));
   }, []);

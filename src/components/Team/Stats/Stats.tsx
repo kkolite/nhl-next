@@ -6,7 +6,7 @@ const Stats = () => {
   const stats = useAppSelector(state => state.stats.stats);
   const overall = useAppSelector(state => state.stats.overall);
   const isLoading = useAppSelector(state => state.stats.isLoading);
-
+  
   const result = isLoading
     ? <MyLoader />
     : <div className={styles.container}>
