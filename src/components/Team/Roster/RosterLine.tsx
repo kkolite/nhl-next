@@ -1,5 +1,6 @@
 import { IPlayer } from '@/data/types';
 import React from 'react';
+import styles from './Roster.module.scss';
 
 interface IProps {
   line: IPlayer[]
@@ -7,11 +8,11 @@ interface IProps {
 
 const RosterLine = ({line}:IProps) => {
   return (
-    <div>
+    <ul className={styles.position__list}>
       {line.map((el) => (
         <li key={el.jerseyNumber}>{el.jerseyNumber || '- '}. {el.person.fullName}</li>
       ))}
-    </div>
+    </ul>
   );
 };
 

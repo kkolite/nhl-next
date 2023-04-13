@@ -18,7 +18,7 @@ const index = ({ teams }:IProps) => {
   const west = teams.filter((el) => el.conference.name === EConference.WEST);
 
   return (
-    <div className='main__container'>
+    <div className={styles.container}>
       <div className={styles.conference}>
         <h2>Eastern</h2>
         <div className={styles.teams}>

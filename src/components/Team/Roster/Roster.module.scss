@@ -1,0 +1,35 @@
+.position__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  & li {
+    cursor: pointer;
+    transition: all .2s;
+      
+    &:hover {
+      color: rgb(111, 203, 249);
+    }
+  }
+}
+
+.roster {
+  &__container {
+    display: flex;
+    gap: 50px;
+    font-size: 18px;
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  &__line {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}

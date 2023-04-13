@@ -1,0 +1,85 @@
+.schedule {
+  &__container {
+    display: flex;
+    gap: 100px;
+    width: 100%;
+  }
+}
+
+.games {
+  &__block {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__h {
+    font-size: 18px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+
+  &__main {
+    font-size: 20px;
+
+    & span {
+      font-weight: 700;
+      transition: all .2s;
+    }
+  }
+
+  &:hover {
+    p span {
+      color: rgb(111, 203, 249);
+    }
+  }
+}
+
+.date {
+  &__block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+}
+
+.set {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 150px;
+  }
+
+  &__button {
+    margin-top: 10px;
+    height: 30px;
+    font-size: 16px;
+    border: none;
+    background-color: rgb(111, 203, 249);
+    color: white;
+    cursor: pointer;
+    transition: all .2s;
+
+    &:hover {
+      background-color: rgb(58, 175, 234);
+    }
+  }
+
+  &__error {
+    color: red
+  }
+}

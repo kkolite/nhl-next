@@ -37,9 +37,11 @@ const Team = ({team}:IProps) => {
         <div>
           <h1>{team.name}</h1>
           <small>{team.conference.name} conference, {team.division.name} division</small>
-          <p>Founded: {team.firstYearOfPlay}</p>
-          <p>Location: {team.locationName}</p>
-          <p>Official site: {team.officialSiteUrl}</p>
+          <div className={styles.info}>
+            <p>Founded: {team.firstYearOfPlay}</p>
+            <p>Location: {team.locationName}</p>
+            <p>Official site: {team.officialSiteUrl}</p>
+          </div>
         </div>
         <div>img placeholder</div>
       </div>

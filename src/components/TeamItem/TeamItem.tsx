@@ -10,13 +10,11 @@ interface IProps {
 const Team = ({team}:IProps) => {
   return (
     <div className={styles.container}>
-      <Link href={`/teams/${team.id}`}>
-        <h3>{team.name}</h3>
-      </Link>
-      <div className={styles.controls}>
-        <button>Roster</button>
-        <button>Schedule</button>
-        <button>Stats</button>
+      <div>
+        <Link href={`/teams/${team.id}`}>
+          <h3>{team.name}</h3>
+        </Link>
+        <small>{team.division.name}</small>
       </div>
     </div>
   );

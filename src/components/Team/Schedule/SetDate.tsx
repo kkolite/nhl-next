@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 import React, { useState } from 'react';
 import { validateDate } from './utils/validate';
 import { TEXT } from '@/data/text';
+import styles from './Schedule.module.scss';
 
 const SetDate = () => {
   const start = useAppSelector(store => store.schedule.startSearch);
@@ -34,7 +35,7 @@ const SetDate = () => {
   }
 
   return (
-    <div>
+    <div className={styles.set__container}>
       <input 
         type="date" 
         value={start} 
@@ -45,8 +46,8 @@ const SetDate = () => {
         value={end} 
         onChange={handleEnd}
       />
-      <button onClick={handleClick}>Find</button>
-      <label>{error}</label>
+      <button onClick={handleClick} className={styles.set__button}>Find</button>
+      <label className={styles.set__error}>{error}</label>
     </div>
   );
 };
