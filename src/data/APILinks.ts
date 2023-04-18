@@ -5,3 +5,5 @@ export const FRANCHISES = 'franchises/';
 export const TEAMS = 'teams/';
 
 export const SCHEDULE = 'schedule/';
+
+export const PLAYER = 'people/';

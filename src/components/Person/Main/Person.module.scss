@@ -1,0 +1,12 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  border-bottom: 2px solid rgb(111, 203, 249);
+}
