@@ -1,5 +1,5 @@
 import { useAppDispatch, useAppSelector } from '@/store/hook';
-import { fetchSchedule, setEnd, setStart } from '@/store/scheduleSlice';
+import { fetchSchedule, setEnd, setStart } from '@/store/slices/scheduleSlice';
 import { useRouter } from 'next/router';
 import React, { useState } from 'react';
 import { validateDate } from './utils/validate';

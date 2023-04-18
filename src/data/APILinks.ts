@@ -7,3 +7,5 @@ export const TEAMS = 'teams/';
 export const SCHEDULE = 'schedule/';
 
 export const PLAYER = 'people/';
+
+export const PLAYER_STAT='/stats?stats=yearByYear'

@@ -1,15 +1,17 @@
 import { configureStore } from '@reduxjs/toolkit';
-import cardReducer from './franchisesSlice';
-import rosterReducer from './rosterSlice';
-import teamSettingReducer from './teamSettingSlice';
-import statsReducer from './statsSlice';
-import scheduleReducer from './scheduleSlice';
+import cardReducer from './slices/franchisesSlice';
+import rosterReducer from './slices/rosterSlice';
+import teamSettingReducer from './slices/teamSettingSlice';
+import statsReducer from './slices/statsSlice';
+import scheduleReducer from './slices/scheduleSlice';
+import personStatsReducer from './slices/personStatsSlice'
 
 const store = configureStore({
   reducer: {
     cards: cardReducer,
     roster: rosterReducer,
     stats: statsReducer,
+    personStats: personStatsReducer,
     schedule: scheduleReducer,
     teamSetting: teamSettingReducer
   },

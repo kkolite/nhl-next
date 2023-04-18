@@ -5,15 +5,15 @@ import Switch from "../Switch/Switch";
 import { useAppDispatch } from "@/store/hook";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
-import { fetchRoster, setRoster } from "@/store/rosterSlice";
-import { fetchStats } from "@/store/statsSlice";
-import { fetchSchedule } from "@/store/scheduleSlice";
+import { fetchRoster, setRoster } from "@/store/slices/rosterSlice";
+import { fetchStats } from "@/store/slices/statsSlice";
+import { fetchSchedule } from "@/store/slices/scheduleSlice";
 import { THREE_DAYS } from "@/data/consts";
 import Image from "next/image";
 import location from '../../../../public/icons/location.png';
 import website from '../../../../public/icons/world-wide-web.png';
 import { LOGOS } from "../../../../public/logos";
-import { setOption } from "@/store/teamSettingSlice";
+import { setOption } from "@/store/slices/teamSettingSlice";
 
 interface IProps {
   team: ITeam;

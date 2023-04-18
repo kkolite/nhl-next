@@ -217,3 +217,22 @@ export interface IPerson {
       abbreviation: string
   }
 }
+
+export interface IPersonStat {
+  season: string,
+  stat: {
+    assists: number,
+    goals: number,
+    games: number,
+    points: number
+  },
+  team: {
+    name: string,
+    link: string
+  },
+  league: {
+    id: number,
+    name: string,
+    link: string
+  },
+}

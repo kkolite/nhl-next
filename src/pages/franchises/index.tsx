@@ -1,6 +1,6 @@
 import Franchise from '@/components/Franchise/Franchise';
 import { MyLoader } from '@/components/UI/loader';
-import { fetchFranchise } from '@/store/franchisesSlice';
+import { fetchFranchise } from '@/store/slices/franchisesSlice';
 import { useAppDispatch, useAppSelector } from '@/store/hook';
 import React, { useEffect } from 'react';
 import Image from 'next/image';

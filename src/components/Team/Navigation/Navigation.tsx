@@ -1,6 +1,6 @@
 import { useAppDispatch } from '@/store/hook';
 import styles from './Navigation.module.scss';
-import { setOption } from '@/store/teamSettingSlice';
+import { setOption } from '@/store/slices/teamSettingSlice';
 import { EOption } from '@/data/types';
 import { useInnerNavigate } from '@/hooks';
 
