@@ -4,6 +4,7 @@
   flex-direction: column;
   gap: 5px;
   align-items: flex-start;
+  width: 250px;
 }
 
 .link {
@@ -28,8 +29,6 @@
 
   &__line {
     display: flex;
-    //flex-direction: column;
-    //gap: 20px;
     justify-content: space-between;
     align-items: center;
     padding-bottom: 40px;
