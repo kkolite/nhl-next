@@ -18,3 +18,10 @@
   font-weight: 700;
   color: white;
 }
+
+@media screen and (max-width: 850px) {
+  .placeholder {
+    width: 250px;
+    height: 250px;
+  }
+}

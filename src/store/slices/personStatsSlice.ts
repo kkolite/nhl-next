@@ -7,7 +7,8 @@ interface IState {
   isLoading: boolean;
   error: string;
   sortUp: boolean;
-  active: ESort | null
+  active: ESort | null;
+  origin: IPersonStat[] | null;
 }
 
 const initialState: IState = {
@@ -15,7 +16,8 @@ const initialState: IState = {
   isLoading: false,
   error: '',
   sortUp: true,
-  active: null
+  active: null,
+  origin: null
 };
 
 export const fetchPersonStats = createAsyncThunk('personStats/fetchCards', async (id: number) => {
@@ -34,6 +36,12 @@ const personStatsSlice = createSlice({
         ? state.stats.sort((a,b) => a.stat[action.payload] - b.stat[action.payload])
         : state.stats.sort((a,b) => b.stat[action.payload] - a.stat[action.payload])
       state.sortUp = !state.sortUp;
+    },
+
+    sortBySeason(state) {
+      if (!state.stats || !state.origin) return;
+      state.stats = state.origin.reverse();
+      state.active = null;
     }
   },
   extraReducers: (builder) => {
@@ -44,6 +52,7 @@ const personStatsSlice = createSlice({
       .addCase(fetchPersonStats.fulfilled, (state, action) => {
         state.isLoading = false;
         state.stats = action.payload;
+        state.origin = action.payload;
       })
       .addMatcher(isError, (state, action: PayloadAction<string>) => {
         state.isLoading = false;
@@ -58,4 +67,4 @@ function isError(action: AnyAction) {
 
 export default personStatsSlice.reducer;
 
-export const { sort } = personStatsSlice.actions
+export const { sort, sortBySeason } = personStatsSlice.actions

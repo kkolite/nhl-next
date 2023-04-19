@@ -3,7 +3,7 @@ import React from 'react';
 import StatsTR from './StatsTR';
 import styles from './Stats.module.scss';
 import { useAppDispatch, useAppSelector } from '@/store/hook';
-import { sort } from '@/store/slices/personStatsSlice';
+import { sort, sortBySeason } from '@/store/slices/personStatsSlice';
 
 interface IProps {
   stats: IPersonStat[]
@@ -17,11 +17,20 @@ const StatsTable = ({stats}:IProps) => {
     dispatch(sort(option))
   }
 
+  const handleSeasonClick = () => {
+    dispatch(sortBySeason());
+  }
+
   return (
     <table className={styles.table}>
       <thead>
         <tr className={styles.thead}>
-          <th>Season</th>
+          <th
+            onClick={handleSeasonClick}
+            className={activeSort ? '' : styles.active}
+          >
+            Season
+          </th>
           <th>Team</th>
           <th>League</th>
           <th 

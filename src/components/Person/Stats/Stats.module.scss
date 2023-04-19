@@ -1,9 +1,16 @@
 .table {
   width: 100%;
   border-collapse: collapse;
+  position: relative;
+
   & tbody tr td {
     border: 1px dotted rgb(111, 203, 249);
     padding: 5px;
+  }
+
+  &__container {
+    overflow-x: scroll;
+    width: 100%;
   }
 }
 
@@ -14,7 +21,8 @@
     border-bottom: 2px solid rgb(111, 203, 249);  
   }
 
-  & th:nth-child(n+4) {
+  & th:nth-child(n+4),
+  & th:first-child {
     transition: all .2s;
     cursor: pointer;
 

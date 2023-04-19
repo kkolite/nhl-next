@@ -3,6 +3,7 @@ import { useAppDispatch, useAppSelector } from '@/store/hook';
 import { fetchPersonStats } from '@/store/slices/personStatsSlice';
 import React, { useEffect } from 'react';
 import StatsTable from './StatsTable';
+import styles from './Stats.module.scss';
 
 interface IProps {
   ID: number
@@ -18,7 +19,7 @@ const Stats = ({ID}:IProps) => {
   }, [ID])
 
   return (
-    <div>
+    <div className={styles.table__container}>
       {
         isLoading
         ? <MyLoader />

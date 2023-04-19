@@ -15,13 +15,14 @@ const Person = ({person}:IProps) => {
     <div className={styles.container}>
       <div className={styles.head}>
         <Photo />
-        <div>
+        <div className={styles.block}>
           <Headline person={person} />
           <Passport person={person} />
         </div>
       </div>
       <div className={styles.stat}>
         <h2>Player statistics</h2>
+        <small>You can sort table</small>
         <Stats ID={person.id} />
       </div>
     </div>
