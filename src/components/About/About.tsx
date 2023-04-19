@@ -4,12 +4,18 @@ import imageTwo from '../../../public/images/about2.png';
 import imageThree from '../../../public/images/about3.png';
 import styles from './About.module.scss';
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 const About = () => {
+  const [animation, setAnimation] = useState(true);
+  useEffect(() => {
+    setTimeout(() => setAnimation(false), 200)
+  }, [])
+
   return (
     <>
       <section className={styles.section}>
-        <div className={styles.block}> 
+        <div className={animation ? styles.block : styles.block + ' ' + styles.active__text}> 
           <h4>Franchises, teams, roster, stats - get a lot of info about NHL</h4>
           <Link href={'/teams'}>
             <button className={styles.button}>Explore NHL</button>
@@ -19,7 +25,7 @@ const About = () => {
           src={imageThree}
           alt='hockey'
           placeholder={'blur'}
-          className={styles.image}
+          className={animation ? styles.image : styles.image + ' ' + styles.active__image}
         />
       </section>
       <section className={styles.section + ' ' + styles.section__second}>
@@ -27,9 +33,9 @@ const About = () => {
           src={imageOne}
           alt='hockey'
           placeholder={'blur'}
-          className={styles.image}
+          className={animation ? styles.image : styles.image + ' ' + styles.active__image}
         />
-        <div className={styles.block}>
+        <div className={animation ? styles.block : styles.block + ' ' + styles.active__text}>
           <h4>Power of API</h4>
           <p>This project use <a href="https://gitlab.com/dword4/nhlapi" className={styles.link}>NHLApi</a>.<br/> It provides info about:</p>
           <ul>
@@ -46,7 +52,7 @@ const About = () => {
         </div>
       </section>
       <section className={styles.section + ' ' + styles.section__third}>
-        <div className={styles.block}>
+        <div className={animation ? styles.block : styles.block + ' ' + styles.active__text}>
           <h4>Stack</h4>
           <ul>
             <li>Next.js</li>
@@ -63,7 +69,7 @@ const About = () => {
           src={imageTwo}
           alt='hockey'
           placeholder={'blur'}
-          className={styles.image}
+          className={animation ? styles.image : styles.image + ' ' + styles.active__image}
         />
       </section>
     </>

@@ -32,6 +32,9 @@
   height: auto;
   max-height: 550px;
   max-height: 550px;
+  transition: all 1s;
+  opacity: 0;
+  transform: translateY(70px);
 }
 
 .block {
@@ -39,6 +42,9 @@
   flex-direction: column;
   align-items: center;
   gap: 10px;
+  transition: all 1s;
+  opacity: 0;
+  transform: translatex(-70px);
 }
 
 .link {
@@ -68,5 +74,18 @@
     &:hover {
       background-color: white;
     }
+  }
+}
+
+.active {
+
+  &__image {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  &__text {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
