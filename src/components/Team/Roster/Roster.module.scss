@@ -40,3 +40,17 @@
     }
   }
 }
+
+@media screen and (max-width: 550px) {
+  .roster{
+    &__line {
+      flex-direction: column;
+      gap: 10px;
+      padding-bottom: 20px;
+    }
+
+    &__container {
+      gap: 20px
+    }
+  }
+}

@@ -23,3 +23,9 @@
 .active {
   color: rgb(111, 203, 249)
 }
+
+@media screen and (max-width: 650px) {
+  .container {
+    margin: 20px auto;
+  }
+}

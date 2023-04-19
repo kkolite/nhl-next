@@ -20,7 +20,7 @@ const Stats = () => {
           </ul>
         </div>
         <div className={styles.block}>
-          <h4>Shots and Goals (per game)</h4>
+          <h4>Shots & Goals (per game)</h4>
           <ul className={styles.list}>
             <li>Shots: {stats?.shotsPerGame} <span>({overall?.shotsPerGame})</span></li>
             <li>Shots allowed: {stats?.shotsAllowed} <span>({overall?.shotsAllowed})</span></li>
@@ -38,7 +38,7 @@ const Stats = () => {
           </ul>
         </div>
         <div className={styles.block}>
-          <h4>Power Play and Penalty Killing</h4>
+          <h4>Power Play & Penalty Killing</h4>
           <ul className={styles.list}>
             <li>PP Goals: {stats?.powerPlayGoals} <span>({overall?.powerPlayGoals})</span></li>
             <li>PP Percentage: {stats?.powerPlayPercentage} <span>({overall?.powerPlayPercentage})</span></li>

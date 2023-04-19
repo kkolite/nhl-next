@@ -30,3 +30,16 @@
   height: 160px;
   width: auto;
 }
+
+@media screen and (max-width: 550px) {
+  .container {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .logo {
+    height: auto;
+    width: 250px;
+  }
+}

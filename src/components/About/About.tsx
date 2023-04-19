@@ -4,13 +4,10 @@ import imageTwo from '../../../public/images/about2.png';
 import imageThree from '../../../public/images/about3.png';
 import styles from './About.module.scss';
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useAnimation } from "@/hooks";
 
 const About = () => {
-  const [animation, setAnimation] = useState(true);
-  useEffect(() => {
-    setTimeout(() => setAnimation(false), 200)
-  }, [])
+  const animation = useAnimation(200);
 
   return (
     <>
