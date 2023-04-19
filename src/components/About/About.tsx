@@ -56,7 +56,7 @@ const About = () => {
             <li>React</li>
             <li>Redux + RTK</li>
             <li>TypeScript</li>
-            <li>SASS</li>
+            <li>SCSS</li>
           </ul>
           <a href="https://github.com/kkolite">
             <button className={styles.button}>Github</button>
