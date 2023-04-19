@@ -15,9 +15,11 @@ const StatsTR = ({stat}:IProps) => {
       <td>{handledStat.team}</td>
       <td>{handledStat.league}</td>
       <td>{handledStat.games}</td>
-      <td>{handledStat.goals}</td>
-      <td>{handledStat.assists}</td>
-      <td>{handledStat.points}</td>
+      <td>{handledStat.goals || '-'}</td>
+      <td>{handledStat.assists || '-'}</td>
+      <td>{handledStat.points || '-'}</td>
+      <td>{handledStat.saves || '-'}</td>
+      <td>{handledStat.shotsAgainst || '-'}</td>
     </tr>
   );
 };

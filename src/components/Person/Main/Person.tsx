@@ -20,7 +20,7 @@ const Person = ({person}:IProps) => {
           <Passport person={person} />
         </div>
       </div>
-      <div>
+      <div className={styles.stat}>
         <h2>Player statistics</h2>
         <Stats ID={person.id} />
       </div>

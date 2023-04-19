@@ -13,6 +13,8 @@ export const statHandler = (stat: IPersonStat) => {
     games: stat.stat.games,
     goals: stat.stat.goals,
     assists: stat.stat.assists,
-    points: stat.stat.points
+    points: stat.stat.points,
+    saves: stat.stat.savePercentage ? (stat.stat.savePercentage * 100).toFixed(2) : null,
+    shotsAgainst: stat.stat.goalAgainstAverage?.toFixed(2)
   }
 }

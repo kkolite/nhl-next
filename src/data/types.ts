@@ -225,6 +225,8 @@ export interface IPersonStat {
     goals: number,
     games: number,
     points: number
+    savePercentage: number,
+    goalAgainstAverage: number,
   },
   team: {
     name: string,

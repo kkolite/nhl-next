@@ -1,0 +1,22 @@
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  & tbody tr td {
+    border: 1px dotted black;
+    padding: 5px;
+  }
+}
+
+.thead {
+  color: white;
+  background-color: rgb(111, 203, 249);
+
+  & th {
+    padding: 5px;
+  }
+}
+
+.td {
+  border: 1px dotted black;
+  padding: 5px;
+}
