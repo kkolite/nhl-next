@@ -19,7 +19,7 @@ const Roster = () => {
   const result = isLoading 
     ? <MyLoader />
     : <div className={styles.roster__container}>
-        <div className={styles.roster__block}>
+        {/*<div className={styles.roster__block}>*/}
           <div className={styles.roster__line}>
             <h4>Goalies</h4>
             <RosterLine line={goalies} />
@@ -28,7 +28,7 @@ const Roster = () => {
             <h4>Defenders</h4>
             <RosterLine line={defenders} />
           </div>
-        </div>
+        {/*</div>*/}
         <div className={styles.roster__line}>
           <h4>Forwards</h4>
           <RosterLine line={forwards} />
