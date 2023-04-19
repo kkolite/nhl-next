@@ -68,6 +68,15 @@ export enum EOption {
   SCHEDULE = '?expand=team.schedule.next',
 }
 
+export enum ESort {
+  GOALS = 'goals',
+  POINTS = 'points',
+  ASSISTS = 'assists',
+  GAMES = 'games',
+  SAVES = 'savePercentage',
+  SHOTS_AGAINST = 'goalAgainstAverage',
+}
+
 export enum EPosition {
   G = 'G',
   D = 'D',

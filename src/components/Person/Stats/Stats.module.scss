@@ -2,21 +2,28 @@
   width: 100%;
   border-collapse: collapse;
   & tbody tr td {
-    border: 1px dotted black;
+    border: 1px dotted rgb(111, 203, 249);
     padding: 5px;
   }
 }
 
 .thead {
-  color: white;
-  background-color: rgb(111, 203, 249);
-
+  color: black;
   & th {
-    padding: 5px;
+    padding: 8px;
+    border-bottom: 2px solid rgb(111, 203, 249);  
+  }
+
+  & th:nth-child(n+4) {
+    transition: all .2s;
+    cursor: pointer;
+
+    &:hover {
+      color: rgb(111, 203, 249);
+    }
   }
 }
 
-.td {
-  border: 1px dotted black;
-  padding: 5px;
+.active {
+  color: rgb(111, 203, 249);
 }
