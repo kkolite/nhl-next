@@ -30,8 +30,8 @@
 .image {
   width: auto;
   height: auto;
-  max-height: 550px;
-  max-height: 550px;
+  max-height: 500px;
+  max-height: 500px;
   transition: all 1s;
   opacity: 0;
   transform: translateY(70px);
@@ -87,5 +87,46 @@
   &__text {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .image {
+    max-height: 300px;
+    max-height: 300px;
+  }
+
+  .section {
+    font-size: 18px;
+    padding: 30px 10%;
+  
+    & h4 {
+      font-size: 25px;
+      max-width: 350px;
+    }
+  }
+
+  .button {
+    font-size: 25px;
+    padding: 10px 30px;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .section {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 10px;
+    background: linear-gradient(white 95%, rgba(111, 203, 249, .8));
+
+    &__second {
+      flex-direction: column-reverse;
+      background: rgba(111, 203, 249, .8);
+    }
+
+    &__third {
+      background: linear-gradient(rgba(111, 203, 249, .8), white 5%);
+    }
   }
 }

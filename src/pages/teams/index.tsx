@@ -18,28 +18,31 @@ const index = ({ teams }:IProps) => {
   const west = teams.filter((el) => el.conference.name === EConference.WEST);
 
   return (
-    <div className={styles.container}>
-      <div className={styles.conference}>
-        <h2>Eastern</h2>
-        <div className={styles.teams}>
-        {
-          east.map((el) => (
-            <Team team={el} key={el.id.toString()} />
-          ))
-        }
+    <div className='main__container'>
+      <div className={styles.container}>
+        <div className={styles.conference}>
+          <h2>Eastern</h2>
+          <div className={styles.teams}>
+          {
+            east.map((el) => (
+              <Team team={el} key={el.id.toString()} />
+            ))
+          }
+          </div>
         </div>
-      </div>
-      <div className={styles.conference}>
-        <h2>Western</h2>
-        <div className={styles.teams}>
-        {
-          west.map((el) => (
-            <Team team={el} key={el.id.toString()} />
-          ))
-        }
+        <div className={styles.conference}>
+          <h2>Western</h2>
+          <div className={styles.teams}>
+          {
+            west.map((el) => (
+              <Team team={el} key={el.id.toString()} />
+            ))
+          }
+          </div>
         </div>
       </div>
     </div>
+    
   );
 };
 

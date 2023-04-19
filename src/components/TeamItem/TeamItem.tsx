@@ -14,7 +14,7 @@ const Team = ({team}:IProps) => {
     <div className={styles.container}>
       <div>
         <Link href={`/teams/${team.id}`} className={styles.link}>
-          <h3>{team.name}</h3>
+          <h3 className={styles.h}>{team.name}</h3>
         </Link>
         <small>{team.division.name}</small>
       </div>

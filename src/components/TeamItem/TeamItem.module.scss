@@ -3,16 +3,10 @@
   justify-content: space-between;
   align-items: center;
   border: 1px solid rgb(111, 203, 249);
-  font-size: 22px;
+  font-size: 18px;
   padding: 20px;
   width: 100%;
   transition: all .2s;
-}
-
-.controls {
-  width: 250px;
-  display: flex;
-  justify-content: space-between;
 }
 
 .logo {
@@ -27,5 +21,29 @@
 
   &:hover {
     color: rgb(58, 175, 234);
+  }
+}
+
+.h {
+  font-size: 22px;
+}
+
+@media screen and (max-width: 1250px) {
+  .container {
+    padding: 13px;
+  }
+
+  .logo {
+    height: 40px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .h {
+    font-size: 18px;
+  }
+
+  .container {
+    font-size: 14px;
   }
 }

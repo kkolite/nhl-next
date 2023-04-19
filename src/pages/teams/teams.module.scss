@@ -14,5 +14,22 @@
 .container {
   display: flex;
   justify-content: space-between;
-  width: 60%;
+  width: 100%;
+}
+
+@media screen and (max-width: 1250px) {
+  .conference {
+    width: 48%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .conference {
+    width: 100%;
+  }
+
+  .container {
+    flex-direction: column;
+    gap: 30px;
+  }
 }

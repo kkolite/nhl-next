@@ -13,3 +13,18 @@
   align-items: center;
   height: 50px;
 }
+
+@media screen and (max-width: 650px) {
+  .logo {
+    display: none;
+  }
+
+  .container {
+    border-bottom: 2px solid rgb(111, 203, 249);
+  }
+
+  .header {
+    width: 100%;
+    justify-content: center;
+  }
+}
