@@ -1,5 +1,5 @@
 import { APITeam } from '@/API/Team';
-import { EOption, IStats } from '@/data/types';
+import { EOption, IStats, ITeam } from '@/data/types';
 import { createSlice, createAsyncThunk, PayloadAction, AnyAction } from '@reduxjs/toolkit';
 
 interface ICardsState {
@@ -32,12 +32,14 @@ const statsSlice = createSlice({
       })
       .addCase(fetchStats.fulfilled, (state, action) => {
         state.isLoading = false;
-        if (!action.payload.teamStats) return;
+        if (!Object.hasOwn(action.payload, 'teamStats')) return;
+        const team = action.payload as ITeam;
+        if (!team.teamStats) return;
 
         // First el of array - stat, second - overall. API...
 
-        state.stats = action.payload.teamStats[0].splits[0].stat;
-        state.overall = action.payload.teamStats[0].splits[1].stat;
+        state.stats = team.teamStats[0].splits[0].stat;
+        state.overall = team.teamStats[0].splits[1].stat;
       })
       .addMatcher(isError, (state, action: PayloadAction<string>) => {
         state.isLoading = false;
