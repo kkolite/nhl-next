@@ -1,4 +1,3 @@
-import React from 'react';
 import { APITeam } from '../../API/Team'
 import { EOption, IError, ITeam } from '@/data/types';
 import Team from '@/components/Team/Main/Team';

@@ -11,12 +11,12 @@ const GameList = ({gamesList}:IProps) => {
   return (
     <div className={styles.games__list}>
       {
-      gamesList.map((el) => (
-      <div className={styles.date__block}>
+      gamesList.map((el, i) => (
+      <div className={styles.date__block} key={i}>
         <span className={styles.date}>{new Date(el.date).toLocaleDateString('en-US')}</span>
         {
         el.games.map((game) => (
-          <Game game={game} />
+          <Game game={game} key={game.gameDate} />
         ))
         }
       </div>

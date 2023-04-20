@@ -1,10 +1,10 @@
 import Franchise from '@/components/Franchise/Franchise';
 import { MyLoader } from '@/components/UI/loader';
-import { fetchFranchise } from '@/store/slices/franchisesSlice';
+import { fetchFranchise } from '@/store/slices/';
 import { useAppDispatch, useAppSelector } from '@/store/hook';
-import React, { useEffect } from 'react';
-import Image from 'next/image';
+import { useEffect } from 'react';
 import styles from './franchises.module.scss'
+import Image from 'next/image';
 import nhlLogo from '../../../public/nhl_logo.png'
 
 const franchises = () => {

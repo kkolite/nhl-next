@@ -1,12 +1,12 @@
-import Layout from '@/components/Layout/Layout'
 import type { AppProps } from 'next/app'
-import Head from 'next/head'
 import { Provider } from 'react-redux'
 import store from '../store/index'
-import '../styles/global.scss'
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
+import Head from 'next/head'
+import { Layout } from '@/components/Page'
 import { MyLoader } from '@/components/UI/loader'
+import '../styles/global.scss'
 
 export default function App({ Component, pageProps }: AppProps) {
   const [isLoading, setLoading] = useState(false);

@@ -3,6 +3,7 @@ import { EPosition } from '@/data/types';
 import { useAppSelector } from '@/store/hook';
 import RosterLine from './RosterLine';
 import styles from './Roster.module.scss';
+import { TEXT } from '@/data/text';
 
 const Roster = () => {
   const roster = useAppSelector(store => store.roster.roster);
@@ -19,18 +20,16 @@ const Roster = () => {
   const result = isLoading 
     ? <MyLoader />
     : <div className={styles.roster__container}>
-        {/*<div className={styles.roster__block}>*/}
-          <div className={styles.roster__line}>
-            <h4>Goalies</h4>
-            <RosterLine line={goalies} />
-          </div>
-          <div className={styles.roster__line}>
-            <h4>Defenders</h4>
-            <RosterLine line={defenders} />
-          </div>
-        {/*</div>*/}
         <div className={styles.roster__line}>
-          <h4>Forwards</h4>
+          <h4>{TEXT.TEAM.ROSTER.G}</h4>
+          <RosterLine line={goalies} />
+        </div>
+        <div className={styles.roster__line}>
+          <h4>{TEXT.TEAM.ROSTER.D}</h4>
+          <RosterLine line={defenders} />
+        </div>
+        <div className={styles.roster__line}>
+          <h4>{TEXT.TEAM.ROSTER.F}</h4>
           <RosterLine line={forwards} />
         </div>
       </div>

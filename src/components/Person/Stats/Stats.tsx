@@ -25,7 +25,7 @@ const Stats = ({ID}:IProps) => {
         ? <MyLoader />
         : stats
           ? <StatsTable stats={stats} />
-          : <p>No</p>
+          : <></>
       }
     </div>
   );

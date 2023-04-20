@@ -8,7 +8,7 @@ const CustomError = () => {
     <div className={styles.error}>
       <p className={styles.text}>{TEXT.ERRORS.INVALID_PAGE}</p>
       <Link href={'/'}>
-        <button className={styles.button}>Main Page</button>
+        <button className={styles.button}>{TEXT.ERRORS.TO_MAIN}</button>
       </Link>
     </div>
   );

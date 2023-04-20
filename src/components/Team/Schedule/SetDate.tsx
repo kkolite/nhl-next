@@ -1,7 +1,7 @@
 import { useAppDispatch, useAppSelector } from '@/store/hook';
-import { fetchSchedule, setEnd, setStart } from '@/store/slices/scheduleSlice';
+import { fetchSchedule, setEnd, setStart } from '@/store/slices/';
 import { useRouter } from 'next/router';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { validateDate } from './utils/validate';
 import { TEXT } from '@/data/text';
 import styles from './Schedule.module.scss';
@@ -47,7 +47,12 @@ const SetDate = () => {
           value={end} 
           onChange={handleEnd}
         />
-        <button onClick={handleClick} className={styles.set__button}>Find</button>
+        <button 
+          onClick={handleClick} 
+          className={styles.set__button}
+        >
+          {TEXT.TEAM.SCHEDULE.FIND}
+        </button>
       </div>
       <label className={styles.set__error}>{error}</label>
     </div>

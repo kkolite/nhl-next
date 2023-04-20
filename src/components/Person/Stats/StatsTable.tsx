@@ -4,6 +4,7 @@ import StatsTR from './StatsTR';
 import styles from './Stats.module.scss';
 import { useAppDispatch, useAppSelector } from '@/store/hook';
 import { sort, sortBySeason } from '@/store/slices/personStatsSlice';
+import { TEXT } from '@/data/text';
 
 interface IProps {
   stats: IPersonStat[]
@@ -29,45 +30,45 @@ const StatsTable = ({stats}:IProps) => {
             onClick={handleSeasonClick}
             className={activeSort ? '' : styles.active}
           >
-            Season
+            {TEXT.PLAYER.SEASON}
           </th>
-          <th>Team</th>
-          <th>League</th>
+          <th>{TEXT.PLAYER.TEAM}</th>
+          <th>{TEXT.PLAYER.LEAGUE}</th>
           <th 
             onClick={() => handleClick(ESort.GAMES)}
             className={activeSort === ESort.GAMES ? styles.active : ''}
           >
-            Games
+            {TEXT.PLAYER.GAMES}
           </th>
           <th 
             onClick={() => handleClick(ESort.GOALS)}
             className={activeSort === ESort.GOALS ? styles.active : ''}
           >
-            Goals
+            {TEXT.PLAYER.GOALS}
           </th>
           <th 
             onClick={() => handleClick(ESort.ASSISTS)}
             className={activeSort === ESort.ASSISTS ? styles.active : ''}
           >
-            Assists
+            {TEXT.PLAYER.ASSISTS}
           </th>
           <th 
             onClick={() => handleClick(ESort.POINTS)}
             className={activeSort === ESort.POINTS ? styles.active : ''}
           >
-            Points
+            {TEXT.PLAYER.POINTS}
           </th>
           <th 
             onClick={() => handleClick(ESort.SAVES)}
             className={activeSort === ESort.SAVES ? styles.active : ''}
           >
-            Saves
+            {TEXT.PLAYER.SAVES}
           </th>
           <th 
             onClick={() => handleClick(ESort.SHOTS_AGAINST)}
             className={activeSort === ESort.SHOTS_AGAINST ? styles.active : ''}
           >
-            Shots Against
+            {TEXT.PLAYER.SA}
           </th>
         </tr>
       </thead>

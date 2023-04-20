@@ -1,5 +1,5 @@
-import { TEXT } from '../../data/text';
-import { MyLink } from '../UI';
+import { TEXT } from '../../../data/text';
+import { MyLink } from '../../UI';
 import styles from './Navbar.module.scss';
 
 export const Navbar = () => {

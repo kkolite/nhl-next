@@ -1,18 +1,15 @@
 import { EOption, ITeam } from "@/data/types";
-import styles from './Team.module.scss';
-import Navigation from "../Navigation/Navigation";
-import Switch from "../Switch/Switch";
 import { useAppDispatch } from "@/store/hook";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
-import { setRoster } from "@/store/slices/rosterSlice";
-import { fetchStats } from "@/store/slices/statsSlice";
-import { fetchSchedule } from "@/store/slices/scheduleSlice";
+import { setRoster, fetchSchedule, fetchStats, setOption } from "@/store/slices/";
 import { THREE_DAYS } from "@/data/consts";
 import { LOGOS } from "../../../../public/logos";
-import { setOption } from "@/store/slices/teamSettingSlice";
+import Navigation from "../Navigation/Navigation";
+import Switch from "../Switch/Switch";
 import Logo from "../Logo/Logo";
 import Info from "../Info/Info";
+import styles from './Team.module.scss';
 
 interface IProps {
   team: ITeam;

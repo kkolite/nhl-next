@@ -22,17 +22,7 @@ export const fetchFranchise = createAsyncThunk('cards/fetchCards', async () => {
 const cardSlice = createSlice({
   name: 'cards',
   initialState,
-  reducers: {
-    /*setSearch(state, action: PayloadAction<string>) {
-      state.search = action.payload;
-    },
-    setModal(state, action: PayloadAction<IPhoto>) {
-      state.modal = action.payload;
-    },
-    setVisible(state, action: PayloadAction<boolean>) {
-      state.isVisible = action.payload;
-    },*/
-  },
+  reducers: {},
   extraReducers: (builder) => {
     builder
       .addCase(fetchFranchise.pending, (state) => {
@@ -52,7 +42,5 @@ const cardSlice = createSlice({
 function isError(action: AnyAction) {
   return action.type.endsWith('rejected');
 }
-
-//export const { setSearch, setModal, setVisible } = cardSlice.actions;
 
 export default cardSlice.reducer;

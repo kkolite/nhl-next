@@ -3,6 +3,7 @@ import styles from './Navigation.module.scss';
 import { setOption } from '@/store/slices/teamSettingSlice';
 import { EOption } from '@/data/types';
 import { useInnerNavigate } from '@/hooks';
+import { TEXT } from '@/data/text';
 
 const Navigation = () => {
   const dispatch = useAppDispatch();
@@ -18,19 +19,19 @@ const Navigation = () => {
         onClick={() => handleClick(EOption.ROSTER)}
         className={isRoster ? styles.active : ''}
       >
-        Roster
+        {TEXT.TEAM.NAV.ROSTER}
       </li>
       <li 
         onClick={() => handleClick(EOption.STATS)}
         className={isStats ? styles.active : ''}
       >
-        Stats
+        {TEXT.TEAM.NAV.STATS}
       </li>
       <li 
         onClick={() => handleClick(EOption.SCHEDULE)}
         className={isSchedule ? styles.active : ''}
       >
-        Schedule
+        {TEXT.TEAM.NAV.SCHEDULE}
       </li>
     </ul>
   );

@@ -1,7 +1,6 @@
 import { APIPerson } from "@/API/Player";
 import CustomError from "@/components/Error/Error";
 import Person from "@/components/Person/Main/Person";
-import Passport from "@/components/Person/Passport/Passport";
 import { IError, IPerson } from "@/data/types";
 import { useErrorAPI } from "@/hooks";
 

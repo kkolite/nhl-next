@@ -35,7 +35,10 @@ const rosterSlice = createSlice({
       })
       .addCase(fetchRoster.fulfilled, (state, action) => {
         state.isLoading = false;
-        if (action.payload.roster) state.roster = action.payload.roster.roster;
+        if (Object.hasOwn(action.payload, 'roster')) {
+          const team = action.payload as ITeam;
+          if (team.roster) state.roster = team.roster.roster as IPlayer[];
+        }
       })
       .addMatcher(isError, (state, action: PayloadAction<string>) => {
         state.isLoading = false;

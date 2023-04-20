@@ -25,7 +25,7 @@ const Schedule = () => {
               {
               futureGames.length 
                 ? <div className={styles.games__block}>
-                    <h4 className={styles.games__h}>Future games</h4>
+                    <h4 className={styles.games__h}>{TEXT.TEAM.SCHEDULE.FUTURE}</h4>
                     <GameList gamesList={futureGames} />
                   </div>
                 : <></>
@@ -33,7 +33,7 @@ const Schedule = () => {
               {
               prevGames.length 
                 ? <div className={styles.games__block}>
-                    <h4 className={styles.games__h}>Today and Prev games</h4>
+                    <h4 className={styles.games__h}>{TEXT.TEAM.SCHEDULE.PREV}</h4>
                     <GameList gamesList={prevGames} />
                   </div>
                 : <></>

@@ -1,7 +1,6 @@
+import { EConference, ITeam } from '@/data/types';
 import { APITeams } from '@/API/Team';
 import Team from '@/components/TeamItem/TeamItem';
-import { EConference, ITeam } from '@/data/types';
-import React from 'react';
 import styles from './teams.module.scss';
 
 interface IProps {
