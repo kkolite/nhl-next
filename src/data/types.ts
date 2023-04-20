@@ -85,6 +85,10 @@ export enum EPosition {
   R = 'R'
 }
 
+export interface IError {
+  messageNumber: number
+}
+
 export interface IPlayer {
   person: {
     id: number,

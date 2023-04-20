@@ -9,12 +9,10 @@ import { setRoster } from "@/store/slices/rosterSlice";
 import { fetchStats } from "@/store/slices/statsSlice";
 import { fetchSchedule } from "@/store/slices/scheduleSlice";
 import { THREE_DAYS } from "@/data/consts";
-import Image from "next/image";
-import location from '../../../../public/icons/location.png';
-import website from '../../../../public/icons/world-wide-web.png';
-import arena from '../../../../public/icons/stadium.png';
 import { LOGOS } from "../../../../public/logos";
 import { setOption } from "@/store/slices/teamSettingSlice";
+import Logo from "../Logo/Logo";
+import Info from "../Info/Info";
 
 interface IProps {
   team: ITeam;
@@ -41,49 +39,8 @@ const Team = ({team}:IProps) => {
   return (
     <>
       <div className={styles.container}>
-        <div>
-          <h1>{team.name}</h1>
-          <small>{team.conference.name} conference, {team.division.name} division</small>
-          <div className={styles.info}>
-            <p>Founded: {team.firstYearOfPlay}</p>
-            <div>
-              <Image 
-                src={location}
-                alt='location'
-                width='18'
-                height='18'
-                className={styles.icon}
-              />
-              {team.locationName}
-            </div>
-            <div>
-              <Image 
-                src={arena}
-                alt='arena'
-                width='18'
-                height='18'
-                className={styles.icon}
-              />
-              {team.venue.name}
-            </div>
-            <div>
-              <Image 
-                src={website}
-                alt='website'
-                width='18'
-                height='18'
-                className={styles.icon}
-              />
-              <a href={team.officialSiteUrl} className={styles.link}>Official site</a>
-            </div>
-          </div>
-        </div>
-        <Image 
-          src={LOGOS[team.abbreviation]}
-          alt="team-logo"
-          placeholder="blur"
-          className={styles.logo}
-        />
+        <Info team={team} />
+        <Logo src={LOGOS[team.abbreviation]} />
       </div>
       <Navigation />
       <Switch />

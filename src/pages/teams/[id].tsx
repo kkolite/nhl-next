@@ -1,7 +1,9 @@
 import React from 'react';
 import { APITeam } from '../../API/Team'
-import { EOption, ITeam } from '@/data/types';
+import { EOption, IError, ITeam } from '@/data/types';
 import Team from '@/components/Team/Main/Team';
+import CustomError from '@/components/Error/Error';
+import { useErrorAPI } from '@/hooks';
 
 interface IParams {
   params: {
@@ -15,12 +17,15 @@ export async function getServerSideProps({params}:IParams) {
   return { props: result}
 }
 
-const PageTeam = (result: ITeam) => {
-  return (
-    <div className='main__container'>
-      <Team team={result} />
-    </div>
-  );
+const PageTeam = (result: ITeam | IError) => {
+  const check = useErrorAPI(result);
+  const page = check
+    ? <CustomError />
+    : <div className='main__container'>
+        <Team team={result as ITeam} />
+      </div>
+
+  return page;
 };
 
 export default PageTeam;

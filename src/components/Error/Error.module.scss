@@ -1,0 +1,29 @@
+.error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+  gap: 40px;
+}
+
+.text {
+  font-size: 25px;
+  font-weight: 700;
+  color: rgb(111, 203, 249);
+}
+
+.button {
+  font-size: 25px;
+  padding: 10px 30px;
+  background-color: rgba(111, 203, 249, .8);
+  color: white;
+  border: none;
+  transition: all .2s;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgb(111, 203, 249);
+  }
+}

@@ -29,6 +29,11 @@ export default function App({ Component, pageProps }: AppProps) {
 
   return (
     <>
+      <Head>
+        <title>NHL Next</title>
+        <meta name="description" content="Created by kkolite. Next.js" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
       <Provider store={store}>
         <Layout>
           {

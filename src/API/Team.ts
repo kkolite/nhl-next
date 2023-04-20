@@ -6,8 +6,6 @@ interface IResult {
   teams: ITeam[]
 }
 
-
-
 export const APITeams = async() => {
   const res = await fetch(`${MAIN}${TEAMS}`);
   const result: IResult = await res.json();
@@ -17,5 +15,9 @@ export const APITeams = async() => {
 export const APITeam = async(ID: Number, option?: EOption) => {
   const res = await fetch(`${MAIN}${TEAMS}${ID}${option || ''}`);
   const result: IResult = await res.json();
-  return result.teams[0];
+  try {
+    return result.teams[0];  
+  } catch (error) {
+    return result;
+  }
 }

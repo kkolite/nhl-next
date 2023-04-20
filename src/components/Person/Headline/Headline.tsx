@@ -12,7 +12,7 @@ const Headline = ({person}:IProps) => {
     <div>
       <h1>{person.fullName}</h1>
       <small className={styles.small}>
-        #{person.primaryNumber + ' '} 
+        #{(person.primaryNumber || '00') + ' '} 
         {
           person.currentTeam
             ? <Link 

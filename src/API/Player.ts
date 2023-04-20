@@ -16,7 +16,11 @@ interface IResultStat {
 export const APIPerson = async(ID: number) => {
   const res = await fetch(`${MAIN}${PLAYER}${ID}`);
   const result: IResult = await res.json();
-  return result.people[0];
+  try {
+    return result.people[0];  
+  } catch (error) {
+    return result;
+  }
 }
 
 export const APIPersonStat = async(ID: number) => {
